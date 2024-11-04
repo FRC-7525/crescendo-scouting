@@ -38,7 +38,6 @@ function Teleop() {
             <Button
             title="SPEAKER Note (Amplified) (-)"
             onPress={() => addCount(-5)} />
-
             <Text>{count}</Text>
         </>
     )
