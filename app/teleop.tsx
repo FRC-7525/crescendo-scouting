@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Button, Text } from "react-native";
 
 function Teleop() {
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(0);
     
-        if (count <0) {
-            setCount(count+1)
-        }
+    if (count < 0) {
+        setCount(count + 1);
+    }
     
 
     const addCount = (a: number) => {
