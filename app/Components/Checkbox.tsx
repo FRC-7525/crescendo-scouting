@@ -11,12 +11,12 @@ function Checkbox({label}: CheckboxProps) {
 
     return (
         <View>
-         <ExpoCheckbox 
-         onValueChange={() => setChecked(!isChecked)} 
+            <ExpoCheckbox 
+            onValueChange={() => setChecked(!isChecked)} 
             value={isChecked}
-         />
+            />
             <Text>{label}</Text>
-            </View>
+        </View>
     );
 }
 
