@@ -1,8 +1,13 @@
-import { Text } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { Button, View } from 'react-native';
 
 function Index() {
+    const navigation = useNavigation();
+
     return (
-        <Text>b</Text>
+        <View>
+        <Button onPress={() => { navigation.navigate('teleop') }}>Teleop</Button>
+        </View>
     )
 }
 
