@@ -1,5 +1,7 @@
+import Checkbox from "./Components/Checkbox";
 import { useState } from "react";
-import { Button, Text } from "react-native";
+import { Button, Text, View } from "react-native";
+import HorizontalRule from "./Components/Horizontal Rule";
 
 function Teleop() {
     const [count, setCount] = useState(0);
@@ -39,8 +41,13 @@ function Teleop() {
             title="SPEAKER Note (Amplified) (-)"
             onPress={() => addCount(-5)} />
             <Text>{count}</Text>
+        
+        <HorizontalRule label="Input Source" />
+            
+        <Checkbox label="Ground" />
+        <Checkbox label="Source" />
         </>
-    )
+    );
 }
 
 export default Teleop;
