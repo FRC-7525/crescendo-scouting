@@ -6,7 +6,7 @@ function Index() {
 
     return (
         <View>
-        <Button onPress={() => { navigation.navigate('teleop') }}>Teleop</Button>
+            <Button title="Teleop" onPress={() => { navigation.navigate('teleop') }} />
         </View>
     )
 }
