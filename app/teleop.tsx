@@ -18,28 +18,14 @@ function Teleop() {
     return (
         <>
             <Button 
-            title="AMP Note (+)"
+            title="+"
             onPress={() => addCount(1)} />
 
             <Button
-            title="AMP Note (-)"
+            title="-"
             onPress={() => addCount(-1)} />
 
-            <Button
-            title="SPEAKER Note (Not Amplified) (+)"
-            onPress={() => addCount(2)} />
-
-            <Button
-            title="SPEAKER Note (Not Amplified) (-)"
-            onPress={() => addCount(-2)} />
-
-            <Button
-            title="SPEAKER Note (Amplified) (+)"
-            onPress={() => addCount(5)} />
-
-            <Button
-            title="SPEAKER Note (Amplified) (-)"
-            onPress={() => addCount(-5)} />
+            
             <Text>{count}</Text>
         
         <HorizontalRule label="Input Source" />
