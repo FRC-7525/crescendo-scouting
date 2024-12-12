@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import { Text, TextInput, Switch} from 'react-native';
-import { Dropdown } from 'react-native-element-dropdown'; //installed :3
+import DropDownPicker from 'react-native-dropdown-picker';
 
 function Post() {
     const [text, setText] = useState('');
@@ -9,6 +9,7 @@ function Post() {
     const [isFocus, setIsFocus] = useState(false);
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+    const [drop, setDrop] = useState([]);
 
     const data = [
       { label: 'Climbed', value: '1' },
@@ -20,8 +21,8 @@ function Post() {
     return (
       <>
       <Switch>
+      onValueChange={toggleSwitch}
       value={isEnabled}
-      onValueChange={}
       </Switch>
         <TextInput 
         placeholder ="Penalty points"
@@ -36,19 +37,13 @@ function Post() {
         maxLength={250}
         multiline={true}
         />
-        <Dropdown
-        labelField='label'
-        valueField='value'
-        value={value}
-        onFocus={() => setIsFocus(true)}
-        onBlur={() => setIsFocus(false)}
-        onChange={item => {
-            setValue(item.value);
-          setIsFocus(false);
-        }}
-        data={data}
-        placeholder='Climb?'
-        ></Dropdown>
+        <DropDownPicker
+        multiple={true}
+        min={0}
+        max={5}
+        autoScroll={true}
+        />
+
         </>
     )
   }
